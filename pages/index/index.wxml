@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="main">
+        <view class="userinfo logo">
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+        </view>
+
+        <view class='onimg'>
+            <view class='onimg_title'>Tips:为防止图片变形，请上传长宽比1:1的图片</view>
+        </view>
+        <view class='operation'>
+            <button bindtap='openAlbum' type='default' size='{{buttonSize}}'>选择相册图片</button>
+            <button bindtap='exportPic' class='export' size='{{buttonSize}}' type='primary'>一键导出头像</button>
+        </view>
+    </view>
+
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>
+
+<loading hidden="{{downloadLoadingHidden}}">
+    下载中...
+</loading>
