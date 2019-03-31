@@ -1,0 +1,31 @@
+
+.search_bar {
+  display: flex;
+  padding: 10rpx 0rpx;
+  width: 100%;
+  background-color: #e5e5e5;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search_field {
+  width: 80%;
+  background: #ffffff;
+  color: #7d7e80;
+  padding: 10rpx 30rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  height: 50rpx;
+}
+
+.search_bar_icon {
+  color: #7d7e80;
+}
+
+.search_bar_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #7d7e80;
+}

@@ -1,0 +1,15 @@
+<!--pages/auth/auth.wxml-->
+<!-- 授权页面 -->
+<view class="container">
+	<view class="auth_img">
+		<image class="auth_logo" src="/images/wechat_auth.png" />
+	  <view class="line2"></view>	
+	</view>
+	<view class="auth_content">
+		<view class="auth_content_txt font32 color3">申请获得以下权限</view>
+		<view class="auth_content_txt font28 color9">获得你的公开信息(昵称头像等)</view>
+	</view>
+	<button loading="{{buttonLoading}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="auth_btn">授权登录</button>
+</view>
+
+

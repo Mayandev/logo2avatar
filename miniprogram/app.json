@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cropper/cropper",
+    "pages/generatePic/generatePic",
+    "pages/auth/auth",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "校徽头像制作",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-action-sheet": "/components/vant/action-sheet/index"
+  }
+}

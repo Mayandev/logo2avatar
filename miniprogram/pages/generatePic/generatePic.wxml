@@ -1,0 +1,26 @@
+<!--pages/generatePic/generatePic.wxml-->
+<view class=" flex">
+  <canvas class="avatar_canvas " canvas-id="avatarPic" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px">
+
+  </canvas>
+</view>
+<view class="action_button_container">
+  <view bindtap="downloadPic" class="action_button font32 upload_btn flex">
+    <image src="/images/download.png" class="action_icon" />
+    <text class="action_txt">保存</text>
+  </view>
+  <view bindtap="share" class="action_button font32 generate_btn flex">
+    <image src="/images/share.png" class="action_icon" />
+    <text class="action_txt">分享</text>
+  </view>
+</view>
+
+<van-action-sheet
+ close-on-click-overlay="{{true}}"
+ show="{{ show }}"
+ actions="{{ actions }}"
+ cancel-text="取消"
+ bind:cancel="onCancel"
+ bind:close="onClose"
+ bind:select="onSelect"
+/>

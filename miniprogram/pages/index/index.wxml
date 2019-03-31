@@ -1,0 +1,49 @@
+<!-- index.wxml -->
+<!-- 搜索框 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索校徽</view>
+    </label>
+  </view>
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+<scroll-view hidden="{{hiddenSearchRes}}" class="search_result_container" scroll-x="true">
+  <view class="scroll-x" wx:if="{{searchLogoList.length != 0}}">
+    <view class="search_logo" wx:for="{{searchLogoList}}">
+      <image bindtap="selectImage" data-src="{{item.tempFileURL}}" class="search_logo_image" src="{{item.tempFileURL}}" />
+    </view>
+  </view>
+  <view wx:else class="flex_col_center_center" style="height:100%;width:100%;">
+    <view class="tips_text font28">没有想要的校徽？联系管理员</view>
+    <view bind:tap="copyWechatNumber" class="click_txt font28">点击复制管理员微信</view>
+  </view>
+</scroll-view>
+<view class="container flex">
+  <view class="image_container flex">
+    <movable-area style="height:{{logoHeight}}px;width:{{logoWidth}}px">
+      <image class="logo_img" src="{{logoUrl}}" style="height:{{logoHeight}}px;width:{{logoWidth}}px" />
+      <movable-view damping="5" friction="20" style="height:{{avatarHeight}}px;width:{{avatarWidth}}px" class="avatar_container" direction="all" scale="false" scale-min="0.5" x="{{x}}" y="{{y}}" scale-max="3" scale-value="1" animation="true" bindchange="avatarChange" bindscale="avatarScale">
+        <image style="height:{{avatarHeight}}px;width:{{avatarWidth}}px" src="{{avatarUrl}}" class="avatar" />
+      </movable-view>
+    </movable-area>
+  </view>
+</view>
+<view class="action_button_container">
+  <view bindtap="uploadAvatar" class="action_button font32 upload_btn flex">
+    <image src="/images/image.png" class="action_icon" />
+    <text class="action_txt">上传头像</text>
+  </view>
+  <view bindtap="generatePic" class="action_button font32 generate_btn flex">
+    <image src="/images/export.png" class="action_icon" />
+    <text class="action_txt">合成头像</text>
+  </view>
+</view>

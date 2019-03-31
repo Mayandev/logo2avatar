@@ -1,0 +1,41 @@
+/* pages/auth/auth.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.auth_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rpx 80rpx;
+}
+
+.auth_logo {
+  margin: 50rpx auto;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.auth_content {
+  padding: 0rpx 80rpx;
+}
+
+.auth_content_txt {
+  width:100%;
+  margin-top:50rpx;
+}
+
+button::after{ 
+border: none; 
+}
+
+.auth_btn {
+  margin-top: 100rpx;
+  margin-bottom: 30rpx;
+  width: 600rpx;
+  background: #08c261;
+  color: white;
+  padding: 0rpx 100rpx;
+}
