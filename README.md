@@ -1,12 +1,23 @@
-# 云开发 quickstart
+# logo2avatar
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+校徽头像制作小程序，实现不同校徽与头像的叠加，生成新的头像。
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+使用云开发构建项目，头像制作功能使用小程序的 canvas api。
 
-## 参考文档
+校徽图片使用爬虫获取的，如果你需要，可以参考这篇文章：[Python 爬取校徽图片](https://github.com/Mayandev/fever_code/tree/master/python/avatar_scrapy)
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+# 小程序二维码
+
+[]()
+
+# 截图
+
+[]()
+
+# 最后
+
+
+
+
+
 

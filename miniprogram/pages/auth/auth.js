@@ -27,6 +27,7 @@ Page({
     });
     // 调用云函数
     wx.cloud.callFunction({
+      // 调用
       name: 'login',
       data: {},
       success: res => {
