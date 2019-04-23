@@ -8,11 +8,11 @@
 
 # 小程序二维码
 
-[]()
+[](https://github.com/Mayandev/logo2avatar/blob/master/screenshoot/qrcode.png)
 
 # 截图
 
-[]()
+[](https://github.com/Mayandev/logo2avatar/blob/master/screenshoot/screenshot.png)
 
 # 最后
 
