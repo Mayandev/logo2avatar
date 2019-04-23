@@ -32,7 +32,7 @@ Page({
 
   onSelect(event) {
     console.log(event.detail.name);
-  
+    let _this = this;
     switch(event.detail.name) {
       case '保存小程序二维码':
         wx.cloud.downloadFile({
@@ -47,7 +47,7 @@ Page({
                 // const savedFilePath = res.savedFilePath;
                 api.showToast('保存成功', 'success');
                 console.log(res);
-                
+                _this.onCancel()
               }
             })
           },
@@ -55,6 +55,7 @@ Page({
         })
         break;
       default:
+        _this.onCancel()
         break;
     }
   },
@@ -76,7 +77,7 @@ Page({
     ctx.save(); // 先保存状态 已便于画完圆再用
     ctx.beginPath(); //开始绘制
     //先画个圆
-    ctx.arc(logoWidth / 2, logoHeight / 2, avatarWidth / 2, 0, Math.PI * 2, false);
+    ctx.arc(x + avatarWidth / 2, y + avatarHeight / 2 , avatarWidth / 2, 0, Math.PI * 2, false);
     ctx.clip();//画了圆 再剪切  原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内
     ctx.drawImage(avatarUrl, x, y, avatarWidth, avatarHeight);
     ctx.draw(true);
@@ -88,7 +89,10 @@ Page({
   downloadPic() {
     api.saveCanvas('avatarPic')
       .then(res => {
-        api.saveImage(res.tempFilePath);
+        return api.saveImage(res.tempFilePath);
+      })
+      .then(res => {
+        api.showToast('保存成功', 'success');
       });
   },
 
